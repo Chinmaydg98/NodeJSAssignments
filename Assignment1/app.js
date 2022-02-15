@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
         res.write('<title>Home</title>');
         res.write('<body>');
         res.write('<form action="/create-user" method="POST">');
-        res.write('<input type="text" name="username" placeholder="Username">En</input>');
+        res.write('<input type="text" name="username" placeholder="Username"></input>');
         res.write('<button name="submit">Add user</button');
         res.write('</form>');
         res.write('</body>');
