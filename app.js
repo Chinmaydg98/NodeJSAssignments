@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log("Middleware 2");
-    res.status(404);
+    res.send({ message: 'Hello world!'});
 });
 
-http.createServer(app).listen(8000);
+app.listen(8000);
