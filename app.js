@@ -49,18 +49,31 @@ http.createServer((request, response) => {
     if (url == '/notes') {
         fs.readFile('./output/note.txt', (error, savedNotes) => {
             if (!error) {
-                response.setHeader('Content-Type', 'text/html');
-                response.write('<html>');
-                response.write('<title>Stored notes:</title>');
-                response.write('<body>');
-                response.write('<h1>Stored note contents:</h1>');
-                response.write('<p>');
-                response.write(savedNotes.toString());
-                response.write('</p>');
-                response.write('<a href="/">Back</a>')
-                response.write('</body>');
-                response.write('</html>');
-                return response.end();
+                if(savedNotes.toString().length != 0){
+                    response.setHeader('Content-Type', 'text/html');
+                    response.write('<html>');
+                    response.write('<title>Stored notes:</title>');
+                    response.write('<body>');
+                    response.write('<h1>Stored note contents:</h1>');
+                    response.write('<p>');
+                    response.write(savedNotes.toString());
+                    response.write('</p>');
+                    response.write('<a href="/">Back</a>')
+                    response.write('</body>');
+                    response.write('</html>');
+                    return response.end();
+                }
+                else{
+                    response.setHeader('Content-Type', 'text/html');
+                    response.write('<html>');
+                    response.write('<title>Stored notes:</title>');
+                    response.write('<body>');
+                    response.write('<h1>Notes empty</h1>');
+                    response.write('<a href="/">Back</a>')
+                    response.write('</body>');
+                    response.write('</html>');
+                    return response.end();
+                }
             }
         });
     }

@@ -1,0 +1,23 @@
+{
+  "name": "nodejsassignments",
+  "version": "1.0.0",
+  "description": "Course code-along",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinmaydg98/NodeJSAssignments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinmaydg98/NodeJSAssignments/issues"
+  },
+  "homepage": "https://github.com/Chinmaydg98/NodeJSAssignments#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
